@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Posely — Your phone is the bike fitter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/posely-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="screens.css">
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <rect width="200" height="200" rx="28" fill="#1B4F72"/>
+      <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="130" cy="130" r="32"/>
+        <line x1="130" y1="98" x2="130" y2="130"/>
+        <line x1="130" y1="130" x2="156" y2="146"/>
+        <path d="M 70 60 L 70 110"/>
+        <circle cx="70" cy="60" r="10"/>
+      </g>
+    </svg>
+  </template>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAV
+     ════════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img class="mark" src="assets/posely-icon.png" alt="Posely">
+      <span class="name">Posely</span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#sizing">Sizing</a>
+      <a href="#pain">Pain check</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a class="btn btn-primary" href="#pricing" data-comment-anchor="nav-cta">Get Posely</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════ -->
+<header class="hero" id="top" data-screen-label="01 Hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <span class="hero-eyebrow"><span class="dot"></span>On-device pose AI · iOS &amp; Android</span>
+      <h1 data-comment-anchor="hero-h1">
+        Your phone is the<br>
+        <span class="underline accent">bike fitter.</span>
+      </h1>
+      <p class="lead">
+        Record 15 seconds of pedaling. Posely measures your knee, hip and
+        back angles, then tells you exactly how to move the saddle, the
+        stem, or the cleats. No appointment, no studio.
+      </p>
+
+      <div class="cta-row">
+        <a class="store-btn" href="#" aria-label="Download on the App Store">
+          <svg class="icon" viewBox="0 0 384 512" fill="currentColor">
+            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56-164.2c27-32 24.5-61.2 23.7-71.7-23.8 1.4-51.4 16.2-67.1 34.4-17.3 19.5-27.5 43.6-25.3 70.9 25.8 2 49.4-11.3 68.7-33.6z"/>
+          </svg>
+          <div class="lines">
+            <span class="top">Download on the</span>
+            <span class="bot">App Store</span>
+          </div>
+        </a>
+        <a class="store-btn light" href="#" aria-label="Get it on Google Play">
+          <svg class="icon" viewBox="0 0 512 512">
+            <path fill="#00C2FF" d="M37 12.9C30.8 19.4 27 29.4 27 42.5v427c0 13.1 3.8 23.1 10 29.6L301 246.5 37 12.9z"/>
+            <path fill="#FFC500" d="m398 332.5 84-46.7c16-9 16-23.6 0-32.6l-84-46.7L307 251l91 81.5z"/>
+            <path fill="#FF3A44" d="M37 499.1c10.1 10.5 26.6 11.8 45.2 1.6l346.8-191.2-87-87L37 499.1z"/>
+            <path fill="#00D86F" d="M37 12.9 342 308.5l91-91L82.2 11.3C73.8 6.6 65.9 4 58.9 4c-8.7 0-16.2 3.1-21.9 8.9z"/>
+          </svg>
+          <div class="lines">
+            <span class="top">Get it on</span>
+            <span class="bot">Google Play</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="hero-proof">
+        <div class="stack">
+          <div>AK</div><div>MR</div><div>JL</div><div>+</div>
+        </div>
+        <div>
+          <strong style="color:var(--gray600); font-weight:600">12,400+ riders</strong>
+          analyzed · One-time $19.99 · No subscriptions
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO PHONE — Results screen (faithful recreation) -->
+    <div class="hero-phone-wrap">
+      <div class="phone-frame" data-comment-anchor="hero-device">
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span>10:26</span>
+            <span class="right">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="18" height="12" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+            </span>
+          </div>
+
+          <div class="screen-body">
+            <div class="screen-content active">
+              <h1 class="screen-title">Analysis Results</h1>
+              <p class="screen-subtitle">Canyon Aeroad · just now</p>
+
+              <!-- Usage banner -->
+              <div class="usage-banner">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>2 of 3 free full analyses left</span>
+                <span class="dots">
+                  <span class="d on"></span><span class="d"></span><span class="d"></span>
+                </span>
+              </div>
+
+              <!-- Overall status -->
+              <div class="overall-status warning">
+                <div class="row">
+                  <div>
+                    <div class="title">One Adjustment Needed</div>
+                    <div class="sub">Back is slightly too upright for Road</div>
+                  </div>
+                  <div class="icon-big">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Angles mini -->
+              <div class="analysis-mini">
+                <div class="angles">
+                  <div class="angle-mini">
+                    <div class="val ok">33°</div>
+                    <div class="lbl">Knee</div>
+                  </div>
+                  <div class="angle-mini">
+                    <div class="val ok">100°</div>
+                    <div class="lbl">Hip</div>
+                  </div>
+                  <div class="angle-mini">
+                    <div class="val warning">52°</div>
+                    <div class="lbl">Back</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recommendation -->
+              <div class="section-title-row"><span>Recommendation</span></div>
+              <div class="rec-card">
+                <div class="head">
+                  <div class="ttl">Back slightly too upright</div>
+                  <span class="badge warning">Adjust</span>
+                </div>
+                <div class="message">Your torso is at 52°, slightly above the Road range. Try a 10mm longer stem, then re-analyze.</div>
+              </div>
+
+              <!-- Action chips -->
+              <div class="action-chips">
+                <div class="action-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Add a note
+                </div>
+                <div class="action-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                  Find bikes
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab bar -->
+          <div class="tab-bar">
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></div>
+            <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Analyze</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>My Fit</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg><span>Sizing</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Settings</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════════════════
+     STAT STRIP
+     ════════════════════════════════════════════════════════ -->
+<section class="section tight" data-screen-label="02 Stats">
+  <div class="wrap">
+    <div class="stat-strip">
+      <div class="cell">
+        <div class="num"><span>15</span><span class="deg">s</span></div>
+        <div class="lbl">Video length</div>
+      </div>
+      <div class="cell">
+        <div class="num"><span>33</span><span class="deg">°</span></div>
+        <div class="lbl">Knee · optimal 30–40°</div>
+      </div>
+      <div class="cell">
+        <div class="num"><span>3</span><span class="deg"></span></div>
+        <div class="lbl">Joint angles</div>
+      </div>
+      <div class="cell">
+        <div class="num">85<span class="deg">%</span></div>
+        <div class="lbl">Pose confidence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     WHAT YOU GET
+     ════════════════════════════════════════════════════════ -->
+<section class="section" id="features" data-screen-label="03 What you get">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="label">What you get</div>
+      <h2>Studio numbers,<br>without the studio.</h2>
+      <p>The same three angles a professional fitter measures with goniometers and motion-capture rigs — pulled from a side-view video by an on-device MediaPipe model.</p>
+    </div>
+
+    <div class="feature-grid">
+
+      <!-- Feature 1 — Angles (using analysis-mini styling) -->
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-6 6-4-4-3 3"/></svg></div>
+        <h3>Three joint angles, averaged over every pedal cycle.</h3>
+        <p class="desc">Knee at 6 o'clock, hip, and back. We detect 5+ full cycles, drop noisy frames, and average the rest so one bad frame can't swing your fit.</p>
+        <div class="visual">
+          <div class="analysis-mini" style="cursor:default; box-shadow:none; background:var(--gray-50);">
+            <div class="angles">
+              <div class="angle-mini">
+                <div class="val ok">33°</div>
+                <div class="lbl">Knee</div>
+              </div>
+              <div class="angle-mini">
+                <div class="val ok">100°</div>
+                <div class="lbl">Hip</div>
+              </div>
+              <div class="angle-mini">
+                <div class="val warning">52°</div>
+                <div class="lbl">Back</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 — Overall verdict -->
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 9v4M12 17h.01"/></svg></div>
+        <h3>Plain-English verdict on every fit.</h3>
+        <p class="desc">A single status card answers the only question that matters: is anything off, and if so, what?</p>
+        <div class="visual">
+          <div class="overall-status warning" style="margin:0;">
+            <div class="row">
+              <div>
+                <div class="title">One Adjustment Needed</div>
+                <div class="sub">Back is slightly too upright for Road</div>
+              </div>
+              <div class="icon-big">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 — Recommendations -->
+      <div class="feature-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Concrete fixes, not generic advice.</h3>
+        <p class="desc">A rule engine turns each angle into a specific action: longer stem, raise saddle, move cleats — tagged Good or Adjust.</p>
+        <div class="visual" style="display:flex; flex-direction:column; gap:8px;">
+          <div class="rec-card" style="margin:0;">
+            <div class="head">
+              <div class="ttl">Back slightly too upright</div>
+              <span class="badge warning">Adjust</span>
+            </div>
+            <div class="message">Try a 10mm longer stem, then re-analyze.</div>
+          </div>
+          <div class="rec-card" style="margin:0; border-left-color: var(--ok);">
+            <div class="head">
+              <div class="ttl">Knee &amp; hip angles dialed</div>
+              <span class="badge ok">Good</span>
+            </div>
+            <div class="message">Right in the Road range — keep this position.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     HOW IT WORKS
+     ════════════════════════════════════════════════════════ -->
+<section class="section" id="how" style="background:var(--white);" data-screen-label="04 How it works">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="label">How it works</div>
+      <h2>Three steps. Six minutes.<br>One real fit.</h2>
+      <p>The same on-device pipeline that ships in the Posely app — no upload, no waiting room.</p>
+    </div>
+
+    <div class="how-grid">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Lean your phone against the wall.</h3>
+        <p>Side view, frame in shot, you on the bike. Posely's CaptureScreen guides you with a live silhouette.</p>
+        <div class="footnote"><span class="pill">15 sec</span> 720p · 30fps</div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Pedal naturally for fifteen seconds.</h3>
+        <p>MediaPipe Pose Landmarker runs on-device, extracts 33 3D landmarks per frame, detects every cycle.</p>
+        <div class="footnote"><span class="pill">~150 frames</span> · 18 cycles · 85% confidence</div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Read your numbers and your fix.</h3>
+        <p>Three angles, one verdict, a ranked list of recommendations — and a PDF you can take to your mechanic.</p>
+        <div class="footnote"><span class="pill">PDF export</span> Saved locally</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     DEVICE SHOWCASE — 3 phones, all from the real mockup
+     ════════════════════════════════════════════════════════ -->
+<section class="showcase-section" data-screen-label="05 Screenshots">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center; margin: 0 auto 48px;">
+      <div class="label" style="text-align:center">Screens</div>
+      <h2 style="text-align:center">Home, results, profile —<br>built for one job.</h2>
+      <p style="text-align:center; margin: 16px auto 0;">No feed, no dashboard sprawl. Posely is three screens you actually use.</p>
+    </div>
+
+    <div class="device-row">
+
+      <!-- PHONE 1 — HOME -->
+      <div class="phone-frame tilt-l">
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span>10:26</span>
+            <span class="right">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="18" height="12" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+            </span>
+          </div>
+
+          <div class="screen-body">
+            <div class="screen-content active">
+              <h1 class="screen-title">Hi, Tatsi</h1>
+              <p class="screen-subtitle">Ready to check your fit today?</p>
+
+              <!-- Hero gradient card -->
+              <div class="hero-card">
+                <div class="label">Last analysis · 2 days ago</div>
+                <div class="title">Your fit needs 1 adjustment</div>
+                <div class="meta">
+                  <span>🚴 Canyon Aeroad</span>
+                  <span>📊 Road</span>
+                </div>
+                <button class="cta">Start New Analysis →</button>
+              </div>
+
+              <div class="section-title-row">
+                <span>Latest result</span>
+                <a>View full →</a>
+              </div>
+              <div class="analysis-mini">
+                <div class="angles">
+                  <div class="angle-mini"><div class="val ok">33°</div><div class="lbl">Knee</div></div>
+                  <div class="angle-mini"><div class="val ok">100°</div><div class="lbl">Hip</div></div>
+                  <div class="angle-mini"><div class="val warning">52°</div><div class="lbl">Back</div></div>
+                </div>
+              </div>
+
+              <div class="section-title-row">
+                <span>My bikes · 3</span>
+                <a>Manage →</a>
+              </div>
+              <div class="bike-tile">
+                <span class="primary-tag">Primary</span>
+                <div class="head">
+                  <div class="ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                  </div>
+                  <div>
+                    <div class="name">Canyon Aeroad</div>
+                    <div class="style">Road · 56</div>
+                  </div>
+                </div>
+                <div class="mini-angles">
+                  <div class="ang"><div class="v ok">33°</div><div class="l">Knee</div></div>
+                  <div class="ang"><div class="v ok">100°</div><div class="l">Hip</div></div>
+                  <div class="ang"><div class="v warning">52°</div><div class="l">Back</div></div>
+                </div>
+              </div>
+
+              <!-- Pain CTA -->
+              <div class="pain-cta">
+                <div class="icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="body">
+                  <div class="ttl">Something hurts?</div>
+                  <div class="sub">Get a fit-based diagnosis</div>
+                </div>
+                <div class="chevron">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-bar">
+            <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Analyze</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>My Fit</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg><span>Sizing</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Settings</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE 2 — MY FIT (center, larger) -->
+      <div class="phone-frame center">
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span>10:26</span>
+            <span class="right">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="18" height="12" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+            </span>
+          </div>
+
+          <div class="screen-body">
+            <div class="screen-content active">
+              <h1 class="screen-title">My Fit Profile</h1>
+              <p class="screen-subtitle">Last updated 2 days ago · Canyon Aeroad</p>
+
+              <div class="overall-status warning">
+                <div class="row">
+                  <div>
+                    <div class="title">One Adjustment Needed</div>
+                    <div class="sub">Back is slightly too low for Road</div>
+                  </div>
+                  <div class="icon-big">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-title-row"><span>Your angles</span></div>
+              <div class="angle-card">
+                <div class="angle-row">
+                  <div class="left">
+                    <span class="badge ok">Good</span>
+                    <div class="lbl-box">
+                      <span class="name">Knee (6 o'clock)</span>
+                      <span class="range">Optimal: 30–40°</span>
+                    </div>
+                  </div>
+                  <div class="value ok">33°</div>
+                </div>
+                <div class="angle-row">
+                  <div class="left">
+                    <span class="badge ok">Good</span>
+                    <div class="lbl-box">
+                      <span class="name">Hip Angle</span>
+                      <span class="range">Optimal: 75–110°</span>
+                    </div>
+                  </div>
+                  <div class="value ok">100°</div>
+                </div>
+                <div class="angle-row">
+                  <div class="left">
+                    <span class="badge warning">Adjust</span>
+                    <div class="lbl-box">
+                      <span class="name">Back Angle</span>
+                      <span class="range">Optimal: 30–45°</span>
+                    </div>
+                  </div>
+                  <div class="value warning">52°</div>
+                </div>
+              </div>
+
+              <div class="section-title-row"><span>Recommendations</span></div>
+              <div class="rec-card">
+                <div class="head">
+                  <div class="ttl">Back slightly too upright</div>
+                  <span class="badge warning">Adjust</span>
+                </div>
+                <div class="message">Your torso is at 52°, slightly above the Road range (30–45°). This is mostly a comfort preference.</div>
+                <div class="action">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  Try a 10mm longer stem, then re-analyze
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-bar">
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Analyze</span></div>
+            <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>My Fit</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg><span>Sizing</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Settings</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE 3 — RESULTS -->
+      <div class="phone-frame tilt-r">
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span>10:26</span>
+            <span class="right">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="18" height="12" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+            </span>
+          </div>
+
+          <div class="screen-body">
+            <div class="screen-content active">
+              <h1 class="screen-title">Analysis Results</h1>
+              <p class="screen-subtitle">Canyon Aeroad · just now</p>
+
+              <div class="usage-banner">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>2 of 3 free full analyses left</span>
+                <span class="dots"><span class="d on"></span><span class="d"></span><span class="d"></span></span>
+              </div>
+
+              <div class="overall-status warning">
+                <div class="row">
+                  <div>
+                    <div class="title">One Adjustment Needed</div>
+                    <div class="sub">Back is slightly too upright</div>
+                  </div>
+                  <div class="icon-big">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analysis-mini">
+                <div class="angles">
+                  <div class="angle-mini"><div class="val ok">33°</div><div class="lbl">Knee</div></div>
+                  <div class="angle-mini"><div class="val ok">100°</div><div class="lbl">Hip</div></div>
+                  <div class="angle-mini"><div class="val warning">52°</div><div class="lbl">Back</div></div>
+                </div>
+              </div>
+
+              <div class="section-title-row"><span>Recommendation</span></div>
+              <div class="rec-card">
+                <div class="head">
+                  <div class="ttl">Back slightly too upright</div>
+                  <span class="badge warning">Adjust</span>
+                </div>
+                <div class="message">Your torso is at 52°, slightly above the Road range. Try a 10mm longer stem, then re-analyze.</div>
+              </div>
+
+              <div class="action-chips">
+                <div class="action-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Add a note
+                </div>
+                <div class="action-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+                  Pain diag
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-bar">
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></div>
+            <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>Analyze</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>My Fit</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg><span>Sizing</span></div>
+            <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Settings</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PAIN DIAGNOSIS — body-svg-wrap recreation
+     ════════════════════════════════════════════════════════ -->
+<section class="section pain-section" id="pain" data-screen-label="06 Pain diagnosis">
+  <div class="wrap pain-grid">
+
+    <div class="copy">
+      <div class="label">Pain diagnosis</div>
+      <h2>Something hurts?<br><span class="a">Tap where.</span></h2>
+      <p class="lead" style="color:var(--gray-600); margin-top:24px">
+        Pick a body zone — knee, lower back, neck, achilles — and Posely cross-references your latest fit numbers to tell you the most likely cause and the fix.
+      </p>
+
+      <!-- Diagnosis preview card (replica of diag-card.high) -->
+      <div class="diag-preview">
+        <div class="diag-head">
+          <div class="diag-title">Saddle too low</div>
+          <span class="confidence-badge high">High</span>
+        </div>
+        <div class="diag-desc">When the saddle is too low, the knee flexes excessively at the bottom of the pedal stroke, putting strain on the patella and quadriceps tendon.</div>
+        <div class="evidence">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Supported by your analysis — knee angle is 48°, above optimal 30–40°
+        </div>
+        <div class="action"><strong>Action:</strong> Raise saddle by 5–10 mm. Re-analyze after riding 30 min to verify.</div>
+      </div>
+    </div>
+
+    <!-- Body SVG (exact recreation from mockup) -->
+    <div class="pain-card">
+      <div class="modal-title">Where does it hurt?</div>
+      <p class="modal-sub">Tap the areas where you feel discomfort</p>
+
+      <div class="body-svg-wrap">
+        <svg width="200" height="400" viewBox="0 0 200 400">
+          <!-- Body silhouette -->
+          <ellipse cx="100" cy="40" rx="22" ry="26" fill="#E5E8EB" stroke="#ABB2B9" stroke-width="1.5"/>
+          <path d="M78 70 L78 85 L60 90 L50 150 L55 220 L50 260 L55 320 L50 380 L70 385 L80 320 L90 260 L100 260 L110 260 L120 320 L130 385 L150 380 L145 320 L150 260 L145 220 L150 150 L140 90 L122 85 L122 70 Z"
+                fill="#E5E8EB" stroke="#ABB2B9" stroke-width="1.5"/>
+
+          <!-- Zones -->
+          <circle class="pain-zone" cx="100" cy="60" r="14"/>
+          <text x="118" y="64" font-size="9" font-weight="600" fill="#7F8C8D">Neck</text>
+
+          <rect class="pain-zone" x="75" y="120" width="50" height="30" rx="6"/>
+          <text x="132" y="138" font-size="9" font-weight="600" fill="#7F8C8D">Back</text>
+
+          <rect class="pain-zone" x="75" y="165" width="50" height="20" rx="4"/>
+          <text x="132" y="178" font-size="9" font-weight="600" fill="#7F8C8D">Saddle</text>
+
+          <circle class="pain-zone selected" cx="75" cy="210" r="14"/>
+          <text x="29" y="214" font-size="9" font-weight="700" fill="#CB4335">Knee</text>
+          <circle class="pain-zone" cx="125" cy="210" r="14"/>
+
+          <circle class="pain-zone" cx="75" cy="310" r="10"/>
+          <text x="25" y="314" font-size="9" font-weight="600" fill="#7F8C8D">Achilles</text>
+          <circle class="pain-zone" cx="125" cy="310" r="10"/>
+        </svg>
+      </div>
+
+      <div class="selected-row">
+        <span class="form-label">Selected</span>
+        <span class="zone-chip">
+          Front knee
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     BIKE SIZING — Find My Size recreation
+     ════════════════════════════════════════════════════════ -->
+<section class="section" id="sizing" style="background:var(--white);" data-screen-label="07 Bike sizing">
+  <div class="wrap sizing-grid">
+
+    <!-- Sizing card mock -->
+    <div class="sizing-mock">
+      <div class="modal-title">Find My Size</div>
+      <p class="modal-sub">Bikes that match your fit profile</p>
+
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="placeholder">Search by brand or model…</span>
+      </div>
+
+      <div class="info-banner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div class="txt">
+          <div class="banner-ttl">Using your Fit Profile</div>
+          We'll rank bikes by how well their geometry matches your current fit.
+        </div>
+      </div>
+
+      <div class="section-title-row" style="margin: 16px 0 10px"><span>Popular categories</span></div>
+      <div class="categories-grid">
+        <div class="cat-tile">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg></div>
+          <div class="cat-title">Road</div>
+          <div class="cat-sub">28 models</div>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg></div>
+          <div class="cat-title">Gravel</div>
+          <div class="cat-sub">16 models</div>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg></div>
+          <div class="cat-title">Endurance</div>
+          <div class="cat-sub">12 models</div>
+        </div>
+        <div class="cat-tile">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg></div>
+          <div class="cat-title">TT / Tri</div>
+          <div class="cat-sub">8 models</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy">
+      <div class="label">Bike sizing</div>
+      <h2>Find the frame that fits the <span class="accent" style="color:var(--primary)">numbers you already have.</span></h2>
+      <p class="lead" style="margin-top:24px">
+        Posely scores 300+ road, gravel, and TT frames against your stack, reach and saddle setback — so you stop guessing between size M and size 54.
+      </p>
+      <ul class="check-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Filter by road, gravel, endurance, TT.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Compare two frames side-by-side.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Open marketplace links — no affiliate inflation.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PRIVACY STRIP
+     ════════════════════════════════════════════════════════ -->
+<section class="privacy-strip">
+  <div class="wrap">
+    <div>
+      <div class="label on-dark">Privacy</div>
+      <h2>The pose model runs <span class="a">on your phone.</span></h2>
+    </div>
+    <div>
+      <div class="body">
+        Nothing leaves your device unless you ask it to. Your videos, your landmarks, your numbers — yours.
+      </div>
+      <div class="bullets">
+        <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> On-device MediaPipe Pose Landmarker.</div>
+        <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 0 0-9.78 2.096A4.001 4.001 0 0 0 2 15z"/><line x1="2" y1="2" x2="22" y2="22"/></svg> Videos never uploaded.</div>
+        <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Optional PDF export, locally generated.</div>
+        <div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> No tracking, no ads, no analytics SDK.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PRICING
+     ════════════════════════════════════════════════════════ -->
+<section class="section pricing-section" id="pricing" data-screen-label="08 Pricing">
+  <div class="wrap">
+    <div class="pricing-card">
+      <div class="pricing-grid">
+        <div>
+          <div class="label">Pricing</div>
+          <h2>One-time purchase.<br>Yours forever.</h2>
+          <div class="price-tag">
+            <span class="p">$19.99</span>
+            <span class="o">· one-time, no renewals</span>
+          </div>
+          <p style="color:var(--gray-500); font-size:15px; max-width: 44ch;">
+            Less than half what a single in-studio bike fit costs. Use it across every bike you own.
+          </p>
+          <div class="cta-row" style="margin-top:32px">
+            <a class="store-btn" href="#">
+              <svg class="icon" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56-164.2c27-32 24.5-61.2 23.7-71.7-23.8 1.4-51.4 16.2-67.1 34.4-17.3 19.5-27.5 43.6-25.3 70.9 25.8 2 49.4-11.3 68.7-33.6z"/></svg>
+              <div class="lines">
+                <span class="top">Download on the</span>
+                <span class="bot">App Store</span>
+              </div>
+            </a>
+            <a class="store-btn light" href="#">
+              <svg class="icon" viewBox="0 0 512 512">
+                <path fill="#00C2FF" d="M37 12.9C30.8 19.4 27 29.4 27 42.5v427c0 13.1 3.8 23.1 10 29.6L301 246.5 37 12.9z"/>
+                <path fill="#FFC500" d="m398 332.5 84-46.7c16-9 16-23.6 0-32.6l-84-46.7L307 251l91 81.5z"/>
+                <path fill="#FF3A44" d="M37 499.1c10.1 10.5 26.6 11.8 45.2 1.6l346.8-191.2-87-87L37 499.1z"/>
+                <path fill="#00D86F" d="M37 12.9 342 308.5l91-91L82.2 11.3C73.8 6.6 65.9 4 58.9 4c-8.7 0-16.2 3.1-21.9 8.9z"/>
+              </svg>
+              <div class="lines">
+                <span class="top">Get it on</span>
+                <span class="bot">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <ul class="perks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited analyses, unlimited bikes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Full pain diagnosis library</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Bike sizing across 300+ frames</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Bike notes &amp; maintenance journal</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> PDF export &amp; analysis history</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> No ads, no subscriptions, ever</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="brand-col">
+      <a class="brand" href="#top" style="margin-bottom:16px">
+        <img class="mark" src="assets/posely-icon.png" alt="" style="width:28px; height:28px; border-radius:6px;">
+        <span class="name" style="color:white">Posely</span>
+      </a>
+      <p style="font-size:13px; line-height:20px; max-width: 32ch; color: rgba(255,255,255,0.6);">
+        Your phone is the bike fitter. On-device pose AI for cyclists who actually ride.
+      </p>
+    </div>
+    <div class="col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#sizing">Sizing</a></li>
+        <li><a href="#pain">Pain check</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="mailto:getposely@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="delete-account.html">Delete account</a></li>
+        <li><a href="mailto:getposely@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="legal" style="grid-column: 1 / -1;">
+      <span>© 2026 Posely. All rights reserved.</span>
+      <span>Made for riders, by riders.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════
+     TWEAKS PANEL
+     ════════════════════════════════════════════════════════ -->
+<div class="tweaks-panel" id="tweaks">
+  <div class="hd">
+    <span class="t">Tweaks</span>
+    <button id="tweaks-close" aria-label="Close">×</button>
+  </div>
+
+  <div class="group">
+    <label class="lbl">Brand color</label>
+    <div class="swatches" data-tweak="brand">
+      <button class="swatch" data-val="purple" style="background:#534AB7" title="Posely purple"></button>
+      <button class="swatch" data-val="navy"   style="background:#1B4F72" title="Cadara navy"></button>
+      <button class="swatch" data-val="forest" style="background:#1E8449" title="Forest"></button>
+      <button class="swatch" data-val="charcoal" style="background:#2C3E50" title="Charcoal"></button>
+    </div>
+  </div>
+
+  <div class="group">
+    <label class="lbl">Density</label>
+    <div class="seg" data-tweak="density">
+      <button data-val="compact">Compact</button>
+      <button data-val="default">Default</button>
+      <button data-val="spacious">Spacious</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "brand": "navy",
+  "density": "default"
+}/*EDITMODE-END*/;
+
+const BRAND_PRESETS = {
+  purple:   { p:'#534AB7', pl:'#EAE8F8', pd:'#3F389A' },
+  navy:     { p:'#1B4F72', pl:'#D6EAF8', pd:'#0E3250' },
+  forest:   { p:'#1E8449', pl:'#D5F5E3', pd:'#145A32' },
+  charcoal: { p:'#2C3E50', pl:'#EAEDED', pd:'#1A1A1A' },
+};
+const DENSITY_PX = { compact: '64px', default: '96px', spacious: '128px' };
+
+const state = { ...TWEAK_DEFAULTS };
+
+function applyState() {
+  const b = BRAND_PRESETS[state.brand] || BRAND_PRESETS.purple;
+  const r = document.documentElement;
+  r.style.setProperty('--primary',       b.p);
+  r.style.setProperty('--primary-light', b.pl);
+  r.style.setProperty('--primary-dark',  b.pd);
+  r.style.setProperty('--density-section', DENSITY_PX[state.density] || '96px');
+
+  document.querySelectorAll('[data-tweak]').forEach(group => {
+    const key = group.dataset.tweak;
+    const val = state[key];
+    group.querySelectorAll('[data-val]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.val === val);
+    });
+  });
+}
+
+function setTweak(key, val) {
+  state[key] = val;
+  applyState();
+  try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*'); } catch (_) {}
+}
+
+document.querySelectorAll('[data-tweak]').forEach(group => {
+  const key = group.dataset.tweak;
+  group.addEventListener('click', e => {
+    const t = e.target.closest('[data-val]');
+    if (!t) return;
+    setTweak(key, t.dataset.val);
+  });
+});
+
+const panel = document.getElementById('tweaks');
+document.getElementById('tweaks-close').addEventListener('click', () => {
+  panel.classList.remove('open');
+  try { window.parent.postMessage({ type:'__edit_mode_dismissed' }, '*'); } catch(_) {}
+});
+
+window.addEventListener('message', (e) => {
+  const d = e.data || {};
+  if (d.type === '__activate_edit_mode')   panel.classList.add('open');
+  if (d.type === '__deactivate_edit_mode') panel.classList.remove('open');
+});
+
+try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(_) {}
+
+applyState();
+</script>
+
+</body>
+</html>
