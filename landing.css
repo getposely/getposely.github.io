@@ -139,22 +139,6 @@ p { margin: 0; }
   border: 1px solid var(--border);
 }
 .store-btn.light:hover { background: var(--gray-50); }
-/* Coming soon: app not yet on the App Store. Make the badge non-clickable
-   so it doesn't lead nowhere. When live, swap back to <a href="<App Store URL>">
-   and remove the .coming-soon class + the <span class="soon"> badge. */
-.store-btn.coming-soon {
-  position: relative;
-  cursor: default;
-  opacity: 0.65;
-}
-.store-btn.coming-soon:hover { background: var(--black); }
-.store-btn .soon {
-  position: absolute; top: -9px; right: -8px;
-  background: var(--gray-600, #475569); color: var(--white);
-  font-size: 9px; font-weight: 700; letter-spacing: 0.4px;
-  text-transform: uppercase;
-  padding: 2px 6px; border-radius: 999px;
-}
 
 /* ── Top nav ────────────────────────────────────────────── */
 .nav {
